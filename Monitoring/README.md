@@ -113,7 +113,7 @@ Once that is done you will Prometheus is set to /Prometheus path in system confi
 ![Screenshot 2025-03-01 005840](https://github.com/user-attachments/assets/c9ad63e0-a2c4-4e21-b8b1-215c94f93679)
 
 
-#### **2. To create a static target, you need to add job_name with static_configs
+#### **2. To create a static target, you need to add job_name with static_configs**
 ``` bash
 sudo vim /etc/prometheus/prometheus.yml
 ```
@@ -162,7 +162,7 @@ Monitoring Jenkins is essential for maintaining a stable and efficient CI/CD env
 | Nikita joshi    | Nikita.Joshi@mygurukulam.co    | https://github.com/jnikita19  |
 
 
-# References
+## **References**
 
 | Reference  | Description |
 | ---------  | ----------- |
