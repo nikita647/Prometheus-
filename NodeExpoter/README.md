@@ -33,26 +33,26 @@ Prometheus scrapes this endpoint at regular intervals, stores the data in its ti
 
 ## **Install Node Exporter on Ubuntu**
 
-### **Go to the [Official Page](https://prometheus.io/download/#node_exporter) downloads Prometheus Node Exporter.**
+### **Step1. Go to the [Official Page](https://prometheus.io/download/#node_exporter) downloads Prometheus Node Exporter.**
 ``` bash
 wget https://github.com/prometheus/node_exporter/releases/download/v1.9.0/node_exporter-1.9.0.linux-amd64.tar.gz
 ```
-### **Extreact the file**
+### **Step2. Extreact the file**
 
 ``` bash
 sudo tar xvfz node_exporter-*.*-amd64.tar.gz
 ```
 
-### **Move the binary file of node exporter to /usr/local/bin location.**
+### **Step3. Move the binary file of node exporter to /usr/local/bin location.**
 ``` bash
 sudo mv node_exporter-*.*-amd64/node_exporter /usr/local/bin/
 ```
-### **Create a node_exporter user to run the node exporter service**
+### **Step4. Create a node_exporter user to run the node exporter service**
 
 ``` bash
 sudo useradd -rs /bin/false node_exporter
 ```
-### **Create a Custom Node Exporter Service**
+### **Step5. Create a Custom Node Exporter Service**
 ``` bash
 sudo nano /etc/systemd/system/node_exporter.service
 ```
@@ -83,19 +83,19 @@ WantedBy=multi-user.target
 
 ```
 
-### **Reload the systemd**
+### **Step6. Reload the systemd**
 ``` bash
 sudo systemctl daemon-reload
 ```
 
-### **To Start, enable node exporter:**
+### **Step7. Start, enable node exporter:**
 ``` bash
 sudo systemctl enable node_exporter
 sudo systemctl start node_exporter
 sudo systemctl status node_exporter
 ```
 
-### **update configuration file using below command:**
+### **Step8. update configuration file using below command:**
 
 ``` bash
 sudo nano /etc/prometheus/prometheus.yml
@@ -110,7 +110,7 @@ sudo nano /etc/prometheus/prometheus.yml
       - targets: ['<Server_IP_of_Node_Exporter_Machine>:9100']
 ```
 
-### **restart our prometheus**
+### **Step9. restart our prometheus**
 ``` bash
 
 sudo systemctl restart prometheus.service
