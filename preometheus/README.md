@@ -11,11 +11,10 @@
 
 1. [Introduction](#introduction)
 2. [Prerequisites for Prometheus](#prerequisites-for-prometheus)
-3. [What is Prometheus?](#what-is-prometheus)
-4. [Why Use Prometheus?](#why-use-prometheus)
-5. [Advantages of Prometheus](#advantages-of-prometheus)
-6. [Disadvantages of Prometheus](#disadvantages-of-prometheus)
-7. [Steps to Install Prometheus](#steps-to-install-prometheus)
+3. [Why Use Prometheus?](#why-use-prometheus)
+4. [Advantages of Prometheus](#advantages-of-prometheus)
+5. [Disadvantages of Prometheus](#disadvantages-of-prometheus)
+6. [Steps to Install Prometheus](#steps-to-install-prometheus)
    - [Create a system user for Prometheus](#create-a-system-user-for-prometheus)
    - [Create configuration directories](#create-configuration-directories)
    - [Set directory ownership](#set-directory-ownership)
@@ -27,11 +26,13 @@
    - [Create a Systemd Service File](#create-a-systemd-service-file)
    - [Reload systemd and start Prometheus](#reload-systemd-and-start-prometheus)
    - [Access Prometheus in the browser](#access-prometheus-in-the-browser)
-8. [Conclusion](#conclusion)
-9. [Contact Information](#contact-information)
+7. [Conclusion](#conclusion)
+8. [Contact Information](#contact-information)
 
 ## **Introduction**
-
+Prometheus is an open-source monitoring system used for collecting and storing time-series data. It was originally built at SoundCloud to monitor their large-scale infrastructure. 
+With Prometheus, you can monitor everything from server CPU and memory usage to application-specific metrics.Prometheus supports powerful querying, visualization, and alerting functionalities.
+__
 ## **Prerequisites for Prometheus:**
 
 - Linux-based system (Ubuntu/CentOS)
@@ -40,11 +41,7 @@
 - Sufficient storage on your system and good internet connectivity.
 - Ports Required- 9090 (Prometheus)
   ___
-## **What is Prometheus?**
 
-Prometheus is an open-source monitoring system used for collecting and storing time-series data. It was originally built at SoundCloud to monitor their large-scale infrastructure. 
-With Prometheus, you can monitor everything from server CPU and memory usage to application-specific metrics.Prometheus supports powerful querying, visualization, and alerting functionalities.
-___
 ## **Why Use Prometheus?**
 
 Prometheus is used for monitoring system performance, identifying issues, and setting up alerts. It provides:
