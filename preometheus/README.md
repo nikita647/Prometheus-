@@ -1,6 +1,6 @@
 ## **Prometheus**
 
-<img src="https://github.com/user-attachments/assets/76762a4b-b6ce-43fa-84a4-052f09ad940a" width="400" /> <br>
+<img src="https://github.com/user-attachments/assets/76762a4b-b6ce-43fa-84a4-052f09ad940a" width="800" /> <br>
 
 | **Author** | **Created on** | **Version** | **Last updated by**|**Last Edited On**|**Level** |**Reviewer** |
 |------------|---------------------------|-------------|----------------|-----|-------------|-------------|
