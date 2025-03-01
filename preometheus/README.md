@@ -5,15 +5,46 @@
 
 | **Author** | **Created on** | **Version** | **Last updated by**|**Last Edited On**|**Level** |**Reviewer** |
 |------------|---------------------------|-------------|----------------|-----|-------------|-------------|
-| Nikita Joshi|  26-02-2025           | v1         | Nikita Joshi    |26-02-2025    |  internal review | komal jaiswal | 
+| Nikita Joshi|  2-03-2025           | v1         | Nikita Joshi    |2-03-2025    |  internal review | komal jaiswal | 
 
+## **Table of Contents**
 
+1. [Introduction](#introduction)
+2. [Prerequisites for Prometheus](#prerequisites-for-prometheus)
+3. [What is Prometheus?](#what-is-prometheus)
+4. [Why Use Prometheus?](#why-use-prometheus)
+5. [Advantages of Prometheus](#advantages-of-prometheus)
+6. [Disadvantages of Prometheus](#disadvantages-of-prometheus)
+7. [Steps to Install Prometheus](#steps-to-install-prometheus)
+   - [Create a system user for Prometheus](#create-a-system-user-for-prometheus)
+   - [Create configuration directories](#create-configuration-directories)
+   - [Set directory ownership](#set-directory-ownership)
+   - [Navigate to `/tmp`](#navigate-to-tmp)
+   - [Download Prometheus from the official page](#download-prometheus-from-the-official-page)
+   - [Extract the Prometheus package](#extract-the-prometheus-package)
+   - [Move and set ownership of configuration files](#move-and-set-ownership-of-configuration-files)
+   - [Move binaries and set ownership](#move-binaries-and-set-ownership)
+   - [Create a Systemd Service File](#create-a-systemd-service-file)
+   - [Reload systemd and start Prometheus](#reload-systemd-and-start-prometheus)
+   - [Access Prometheus in the browser](#access-prometheus-in-the-browser)
+8. [Conclusion](#conclusion)
+9. [Contact Information](#contact-information)
 
+## **Introduction**
+
+## **Prerequisites for Prometheus:**
+
+- Linux-based system (Ubuntu/CentOS)
+- user with sudo  privilege.
+- Prometheus system user and group.
+- Sufficient storage on your system and good internet connectivity.
+- Ports Required- 9090 (Prometheus)
+  ___
 ## **What is Prometheus?**
 
 Prometheus is an open-source monitoring system used for collecting and storing time-series data. It was originally built at SoundCloud to monitor their large-scale infrastructure. 
 With Prometheus, you can monitor everything from server CPU and memory usage to application-specific metrics.Prometheus supports powerful querying, visualization, and alerting functionalities.
-
+___
 ## **Why Use Prometheus?**
 
 Prometheus is used for monitoring system performance, identifying issues, and setting up alerts. It provides:
@@ -32,10 +63,9 @@ Prometheus is used for monitoring system performance, identifying issues, and se
 ___
 
 
-![image](https://github.com/user-attachments/assets/12bfa798-148b-47e9-9e2b-5b51b0baeb74)
 
 
-# Advantages of Prometheus
+##  **Advantages of Prometheus**
 | Advantage | Description |
 |-----------|-------------|
 | Open-source and Free | No licensing costs |
@@ -48,7 +78,7 @@ ___
 
 ___
 
-# Disadvantages of Prometheus
+##  **Disadvantages of Prometheus**
 | Disadvantage | Description |
 |-------------|-------------|
 | Limited Long-Term Storage | Data retention is limited without external storage solutions |
@@ -57,49 +87,45 @@ ___
 
 ___
 
-## **Prerequisites for Prometheus:**
-
-- Linux-based system (Ubuntu/CentOS)
-- Root user account with sudo  privilege.
-- Prometheus system user and group.
-- Sufficient storage on your system and good internet connectivity.
-- Ports Required- 9090 (Prometheus)
 
 
- # **Steps to Install Prometheus**
 
-  Create a system user for Prometheus using below commnds:
+## **Steps to Install Prometheus**
+
+### **Create a system user for Prometheus**
   ```
   sudo useradd --no-create-home --shell /bin/false prometheus
   ```
-
-## **Create the directories in which we will be storing our configuration files and libraries:**
+__
+### **Create configuration directories**
 
   ``` bash
   sudo mkdir /etc/prometheus
   sudo mkdir /var/lib/prometheus
   ```
-
-## **Set the ownership of the /var/lib/prometheus directory with below command:**
+___
+### **Set directory ownership**
   ``` bash
   sudo chown prometheus:prometheus /var/lib/prometheus
   ```
-
-## **You need to inside /tmp :**
+___
+### **Navigate to `/tmp`**
   ``` bash
   cd /tmp/
   ```
-
- ## **Go to the [Official Page](https://prometheus.io/download/#prometheus) downloads Prometheus:**
+___
+### **Download Prometheus from the [Official Page](https://prometheus.io/download/#prometheus)**
   ``` bash
   wget https://github.com/prometheus/prometheus/releases/download/v3.2.1/prometheus-3.2.1.linux-amd64.tar.gz
-  ```
- ##  **Extract the files using tar :**
+ ```
+
+___
+###  **Extract the Prometheus package**
   ``` bash
   sudo tar -xvf prometheus-3.2.1.linux-amd64.tar.gz
   ```
-
- ##  **Move the configuration file and set the owner to the prometheus**
+___
+###  **Move and set ownership of configuration files**
 
   ``` bash
   cd prometheus-2.47.2.linux-amd64
@@ -110,8 +136,8 @@ ___
 ``` bash  
 sudo chown -R prometheus:prometheus /etc/prometheus
 ```
-
-## **Move the binaries and set the owner**
+___
+### **Move binaries and set ownership**
 
 ``` bash
 sudo mv prometheus /usr/local/bin/
@@ -119,8 +145,8 @@ sudo mv prometheus /usr/local/bin/
 ``` bash
 sudo chown prometheus:prometheus /usr/local/bin/prometheus
 ```
-
-## **Create a Systemd Service File::**
+___
+### **Create a Systemd Service File**
 ``` bash
 sudo nano /etc/systemd/system/prometheus.service
 ```
@@ -144,29 +170,26 @@ ExecStart=/usr/local/bin/prometheus \
 [Install]
 WantedBy=multi-user.target
 ```
-
-## **Reload systemd:**
+___
+### **Reload systemd and start Prometheus**
 ``` bash
 sudo systemctl daemon-reload
-```
-
-## **Start and enable Prometheus service:**
-
-``` bash
 sudo systemctl start prometheus
 sudo systemctl enable prometheus
 sudo systemctl status prometheus
 ```
-## **Now access Prometheus in your browser**
+
+___
+### **Access Prometheus in the browser**
 ``` bash
 <server-ip>:9090
 ```
-
+___
 ## **Conclusion**
 
 Prometheus is a powerful monitoring tool that provides real-time insights into system performance. Its flexibility and integration with other tools make it a preferred choice for DevOps and SRE teams. However, it requires careful scaling and security considerations for large environments.
 By following best practices, organizations can maximize the benefits of Prometheus for robust monitoring and alerting.
-
+___
 ## **Contact Information**
 
 | **Name** | **Email address**            | **Github ID**
