@@ -4,10 +4,37 @@
 |------------|---------------------------|-------------|----------------|-----|-------------|-------------|
 | Nikita Joshi|  26-02-2025           | v1         | Nikita Joshi    |26-02-2025    |  internal review | komal jaiswal | 
 
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [What is Node Exporter](#what-is-node-exporter)
+- [Why Use Node Exporter?](#why-use-node-exporter)
+- [How Node Exporter Works](#how-node-exporter-works)
+- [Install Node Exporter on Ubuntu](#install-node-exporter-on-ubuntu)
+  - [Step 1: Download Node Exporter from Official Page](#step-1-download-node-exporter-from-official-page)
+  - [Step 2: Extract the File](#step-2-extract-the-file)
+  - [Step 3: Move Binary to /usr/local/bin](#step-3-move-binary-to-usrlocalbin)
+  - [Step 4: Create Node Exporter User](#step-4-create-node-exporter-user)
+  - [Step 5: Create a Custom Node Exporter Service](#step-5-create-a-custom-node-exporter-service)
+  - [Step 6: Reload Systemd](#step-6-reload-systemd)
+  - [Step 7: Start and Enable Node Exporter](#step-7-start-and-enable-node-exporter)
+  - [Step 8: Update Prometheus Configuration](#step-8-update-prometheus-configuration)
+  - [Step 9: Restart Prometheus](#step-9-restart-prometheus)
+- [Conclusion](#conclusion)
+- [Contact Information](#contact-information)
+
+
 ## **Introduction**
 
 Node Exporter is a critical component in the Prometheus monitoring ecosystem. It is an open-source tool designed to collect system-level metrics from Unix-based systems, such as CPU usage, memory consumption, disk I/O, network statistics, and more. 
 
+## **Prerequisites**
+
+- Linux-based system (Ubuntu/CentOS)
+
+- Root or sudo privileges
+  
 ## **What is Node Exporter**
 Node exporter is a Prometheus exporter used for collecting hardware and operating system metrics from a target system. 
 It is designed to be lightweight and easy to install on a variety of systems.
@@ -33,26 +60,26 @@ Prometheus scrapes this endpoint at regular intervals, stores the data in its ti
 
 ## **Install Node Exporter on Ubuntu**
 
-### **Step1. Go to the [Official Page](https://prometheus.io/download/#node_exporter) downloads Prometheus Node Exporter.**
+### **Step 1: Download Node Exporter from [Official Page](https://prometheus.io/download/#node_exporter)**
 ``` bash
 wget https://github.com/prometheus/node_exporter/releases/download/v1.9.0/node_exporter-1.9.0.linux-amd64.tar.gz
 ```
-### **Step2. Extract the file**
+### **Step 2: Extract the File**
 
 ``` bash
 sudo tar xvfz node_exporter-*.*-amd64.tar.gz
 ```
 
-### **Step3. Move the binary file of node exporter to /usr/local/bin location.**
+### **Step 3: Move Binary to /usr/local/bin**
 ``` bash
 sudo mv node_exporter-*.*-amd64/node_exporter /usr/local/bin/
 ```
-### **Step4. Create a node_exporter user to run the node exporter service**
+### **Step 4: Create Node Exporter User**
 
 ``` bash
 sudo useradd -rs /bin/false node_exporter
 ```
-### **Step5. Create a Custom Node Exporter Service**
+### **Step 5: Create a Custom Node Exporter Service**
 ``` bash
 sudo nano /etc/systemd/system/node_exporter.service
 ```
@@ -83,19 +110,19 @@ WantedBy=multi-user.target
 
 ```
 
-### **Step6. Reload the systemd**
+### **Step 6: Reload Systemd**
 ``` bash
 sudo systemctl daemon-reload
 ```
 
-### **Step7. Start, enable node exporter:**
+### **Step 7: Start and Enable Node Exporter**
 ``` bash
 sudo systemctl enable node_exporter
 sudo systemctl start node_exporter
 sudo systemctl status node_exporter
 ```
 
-### **Step8. update configuration file using below command:**
+### **Step 8: Update Prometheus Configuration**
 
 ``` bash
 sudo nano /etc/prometheus/prometheus.yml
@@ -110,7 +137,7 @@ sudo nano /etc/prometheus/prometheus.yml
       - targets: ['<Server_IP_of_Node_Exporter_Machine>:9100']
 ```
 
-### **Step9. restart our prometheus**
+### **Step 9: Restart Prometheus**
 ``` bash
 
 sudo systemctl restart prometheus.service
