@@ -100,7 +100,7 @@ ___
  - To install Prometheus on your system, please follow the link below for the Prometheus Setup Guide. :-[ Prometheus Setup  Guide](https://github.com/nikita647/Prometheus-/blob/main/preometheus/README.md)
 
 ### **step2. Setup NodeExpoter**
- - To Setup NodeExpoter on your system, please follow the link below for the NodeExpoter Setup Guide. :-[ NodeExpoter Setup  Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/blob/Rohit-SCRUM-16/Common/Software/ScyllaDB/Installation/README.md)
+ - To Setup NodeExpoter on your system, please follow the link below for the NodeExpoter Setup Guide. :-[ NodeExpoter Setup  Guide](https://github.com/nikita647/Prometheus-/blob/main/NodeExpoter/README.md)
 
 ### **step3. Setup Grafana**
  - To Setup Grafana on your system, please follow the link below for the Grafana Setup Guide. :-[ Grafana Setup  Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/blob/Rohit-SCRUM-16/Common/Software/ScyllaDB/Installation/README.md)
