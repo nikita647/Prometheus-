@@ -93,7 +93,7 @@ ___
   ```
   sudo useradd --no-create-home --shell /bin/false prometheus
   ```
-__
+___
 ### **Create configuration directories**
 
   ``` bash
