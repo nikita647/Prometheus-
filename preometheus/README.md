@@ -156,7 +156,7 @@ sudo systemctl start prometheus
 sudo systemctl enable prometheus
 sudo systemctl status prometheus
 ```
-## **Now access Prometehus in your browser**
+## **Now access Prometheus in your browser**
 ``` bash
 <server-ip>:9090
 ```
