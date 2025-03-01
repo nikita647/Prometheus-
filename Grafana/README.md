@@ -1,6 +1,30 @@
 # **Grafana**
 ![image](https://github.com/user-attachments/assets/b70ac4ae-6407-40b2-8a66-eebcf4ec53a5)
 
+| **Author** | **Created on** | **Version** | **Last updated by**|**Last Edited On**|**Level** |**Reviewer** |
+|------------|---------------------------|-------------|----------------|-----|-------------|-------------|
+| Nikita Joshi|  26-02-2025           | v1         | Nikita Joshi    |26-02-2025    |  internal review | komal jaiswal | 
+___
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [What is Grafana?](#what-is-grafana)
+- [Why do we Use Grafana?](#why--do-we-use-grafana)
+- [How Does Grafana Work?](#how-does-grafana-work)
+- [Advantages of Grafana](#advantages-of-grafana)
+- [Disadvantages of Grafana](#disadvantages-of-grafana)
+- [Installation Steps](#installation-steps)
+  - [Download the Grafana GPG key](#download-the-grafana-gpg-key)
+  - [Add the Grafana repository](#add-the-grafana-repository)
+  - [Update package lists](#update-package-lists)
+  - [Install Grafana](#install-grafana)
+  - [Start the Grafana server](#start-the-grafana-server)
+  - [Check service status](#check-service-status)
+  - [Access in browser](#access-in-browser)
+  - [Output](#output)
+- [Conclusion](#conclusion)
+- [Contact Information](#contact-information)
 
 ## **Introduction**
 
@@ -74,33 +98,33 @@ ___
 wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
 ```
 
-### **Add the Grafana repository to your APT sources:**
+### **Add the Grafana repository**
 ``` bash
 sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
 ```
 
-### **update your package lists:**
+### **Update package lists**
 ``` bash
 sudo apt update
 ```
 
-### **Install Grafana:**
+### **Install Grafana**
 ``` bash
 sudo apt install grafana
 ```
 
-### **start the Grafana server:**
+### **Start the Grafana server**
 ``` bash
 sudo systemctl start grafana-server
 ```
 
-### **checking the service’s status:**
+### **Check service status**
 ``` bash
 sudo systemctl status grafana-server
 sudo systemctl enable grafana-server
 ```
 
-### **Access in browser:**
+### **Access in browser**
 ``` bash
 <instance_ip>:3000
 ```
@@ -116,7 +140,7 @@ default password: admin
 
 ![image](https://github.com/user-attachments/assets/811203f9-62dd-483a-8faf-f74318f31fd8)
 
-**Click Add data source and select Prometheus**
+**Configuring Data Sources**
 
 For the URL, enter http://localhost:9090 and click Save and test. You can see Data source is working.
 
@@ -129,13 +153,19 @@ Click On Dashboard → + symbol → Import Dashboard
 Click on Import Dashboard paste this code 1860 and click on load
 
 ![image](https://github.com/user-attachments/assets/79a42540-fa6e-4b1e-a08a-5ab1007b7e9c)
-
-You will see this output
+___
+### **Output**
 ![Screenshot 2025-03-01 004708](https://github.com/user-attachments/assets/e1b7bac5-f042-4032-a9c2-c85b40b05dfe)
-
+___
 ## **Conclusion**
 
 Grafana is a powerful visualization and monitoring tool that provides real-time insights into system and application performance. It integrates with multiple data sources, offers customizable dashboards, and supports alerting mechanisms. While it has some limitations, such as high resource consumption and complex queries, 
 it remains a preferred choice for DevOps teams and IT professionals looking to enhance observability.
+___
+## **Contact Information**
+
+| **Name** | **Email address**            | **Github ID**
+|----------|-------------------------------|-------------------|
+| Nikita joshi    | Nikita.Joshi@mygurukulam.co    | https://github.com/jnikita19  |
 
 
