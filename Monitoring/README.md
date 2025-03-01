@@ -97,7 +97,7 @@ ___
 ## **Step by Step Guide**
 
 ### **step1. Setup Prometheus**
- - To install Prometheus on your system, please follow the link below for the Prometheus Setup Guide. :-[ Prometheus Setup  Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/blob/Rohit-SCRUM-16/Common/Software/ScyllaDB/Installation/README.md)
+ - To install Prometheus on your system, please follow the link below for the Prometheus Setup Guide. :-[ Prometheus Setup  Guide](https://github.com/nikita647/Prometheus-/blob/main/preometheus/README.md)
 
 ### **step2. Setup NodeExpoter**
  - To Setup NodeExpoter on your system, please follow the link below for the NodeExpoter Setup Guide. :-[ NodeExpoter Setup  Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/blob/Rohit-SCRUM-16/Common/Software/ScyllaDB/Installation/README.md)
