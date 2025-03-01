@@ -34,7 +34,9 @@ Grafana is an open-source analytics and interactive visualization platform. It a
 
 - Linux-based system (Ubuntu/CentOS)
 
-- Root or sudo privileges
+- user with sudo privileges
+- Sufficient storage on your system and good internet connectivity.
+- Ports Required- 3000 (Prometheus)
 
 
 ## **what is Grafana?**
