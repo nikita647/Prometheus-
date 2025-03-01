@@ -34,6 +34,8 @@ Node Exporter is a critical component in the Prometheus monitoring ecosystem. It
 - Linux-based system (Ubuntu/CentOS)
 
 - Root or sudo privileges
+- Sufficient storage on your system and good internet connectivity.
+- Ports Required- 9100 (Prometheus)
   
 ## **What is Node Exporter**
 Node exporter is a Prometheus exporter used for collecting hardware and operating system metrics from a target system. 
