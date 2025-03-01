@@ -7,6 +7,7 @@
 
 ## Table of Content
 - [Introduction](#introduction)
+- [Pre-requisites](#pre-requisites)
 - [What is Monitoring?](#what-is-monitoring)
 - [What is Jenkins Monitoring ?](#what-is-jenkins-monitoring)
 - [Why is Monitoring Important?](#why-is-monitoring-important)
@@ -30,7 +31,30 @@
 
 Jenkins monitoring means keeping an eye on how well Jenkins is working. It’s important to make sure Jenkins runs smoothly and doesn’t slow down or crash . by monitoring key metrics, you can check if Jenkins is healthy, fix issues early, and keep your development process running without problems.
 
+## **Pre-requisites**
 
+
+| **Specification**      | **Details**         |
+|-------------------------|---------------------|
+| **Operating System**    | Ubuntu 22.04      |
+| **CPU**                | 2 vCPU             |
+| **Hard Disk**             | 20 GB              |
+| **RAM**                | 4 GB               |
+
+--- 
+
+# Security ports
+
+| **Port** | **Protocol** | **Source Side**    | **Destination Side** | **Use Case**                     |
+|----------|--------------|--------------------|-----------------------|-----------------------------------|
+| 80       | TCP          | Any                | Server               | HTTP traffic for web applications|
+| 443      | TCP          | Any                | Server               | Secure HTTPS web traffic         |
+| 3000     | TCP          | Any | server      | Grafana      |
+| 9100     | TCP          | Any                | Server               |  NodeExpoter |
+|9090 | TCP| Any|Server|Prometheus |
+|8080|TCP|Any|server|jenkins|
+
+___
 ## **What is Monitoring?**
 
 Monitoring is the process of continuously tracking and observing the performance of the system and application in real time  .
