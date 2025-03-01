@@ -2,7 +2,7 @@
 
 | **Author** | **Created on** | **Version** | **Last updated by**|**Last Edited On**|**Level** |**Reviewer** |
 |------------|---------------------------|-------------|----------------|-----|-------------|-------------|
-| Nikita Joshi|  26-02-2025           | v1         | Nikita Joshi    |26-02-2025    |  internal review | komal jaiswal | 
+| Nikita Joshi|  2-03-2025           | v1         | Nikita Joshi    |2-03-2025    |  internal review | komal jaiswal | 
 
 
 ## Table of Content
@@ -12,7 +12,7 @@
 - [Why is Monitoring Important?](#why-is-monitoring-important)
 - [Types of Jenkins Metrics ](#types-of-jenkins-metrics)
 - [Tools for Monitoring Jenkins](#tools-for-monitoring-jenkins)
-- [How to monitor jenkins usign Prometheus ,NodeExpoter and Grafana](#how-to-monitor-jenkins-usign-prometheus-nodeexpoter-and-grafana)
+- [Step by Step Guide](#step-by-step-guide)
     - [step1. Setup Prometheus](#step1-setup-prometheus)
     - [step2. Setup NodeExpoter](#step2-setup-nodeexpoter)
     - [step3. Setup Grafana](#step3-setup-grafana)
@@ -70,7 +70,7 @@ ___
 | **Elastic Stack (ELK)** | Collects and analyzes Jenkins logs for in-depth insights. |
 | **CloudWatch (AWS)** | Monitors Jenkins instances running on AWS, helping track resource usage. |
 ___
-## **How to monitor jenkins usign Prometheus ,NodeExpoter and Grafana**
+## **Step by Step Guide**
 
 ### **step1. Setup Prometheus**
  - To install Prometheus on your system, please follow the link below for the Prometheus Setup Guide. :-[ Prometheus Setup  Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/blob/Rohit-SCRUM-16/Common/Software/ScyllaDB/Installation/README.md)
