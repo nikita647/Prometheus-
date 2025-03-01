@@ -37,7 +37,7 @@ Prometheus scrapes this endpoint at regular intervals, stores the data in its ti
 ``` bash
 wget https://github.com/prometheus/node_exporter/releases/download/v1.9.0/node_exporter-1.9.0.linux-amd64.tar.gz
 ```
-### **Step2. Extreact the file**
+### **Step2. Extract the file**
 
 ``` bash
 sudo tar xvfz node_exporter-*.*-amd64.tar.gz
